@@ -48,26 +48,11 @@ a {
   text-decoration: none; /*so cancel selection on link (color and underline);*/
   color: inherit;
 }
-.forstartup{
-font-size: 100px;
-line-height: 130%;
-align-self: stretch;
-font-weight:700;
-text-align: center;
-justify-content: center;
-text-transform: lowercase;
-display: flex;
-align-items: center;
-background: var(--gradient-name-1, linear-gradient(90deg, #298AEE 0%, #02D0DE 100%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
 .name {
   font-display:flex;
   text-align: center;
   font-size: 46px;
+  color: #FFF8FF;
 }
 .maincard{
   background-color: #1C1C1C;
@@ -552,4 +537,19 @@ align-self: stretch;
   color: #FFF8FF;
   text-transform: capitalize;
   line-height: 150%;
+}
+.text {
+font-size: 100px;
+line-height: 130%;
+align-self: stretch;
+font-weight:700;
+text-align: center;
+justify-content: center;
+text-transform: lowercase;
+display: flex;
+align-items: center;
+background: var(--gradient-name-1, linear-gradient(90deg, #298AEE 0%, #02D0DE 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
