@@ -26,7 +26,17 @@
         <span><a href="Tariffs">Tariffs</a></span>
         <span><a href="Contact us">Contact us</a></span>
         <span><a href="About the company">About the company</a></span>
-        <span><a href="section 5">Section 5</a><span>
+        <span><a href="svg-button">
+            <div class="button-theme">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M12.5 18C11.4067 18 10.3733 17.79 9.4 17.37C8.42667 16.95 7.57667 16.3767 6.85 15.65C6.12333 14.9233 5.55 14.0733 5.13 13.1C4.71 12.1267 4.5 11.0933 4.5 10C4.5 8.89333 4.71 7.85667 5.13 6.89C5.55 5.92333 6.12333 5.07667 6.85 4.35C7.57667 3.62333 8.42667 3.05 9.4 2.63C10.3733 2.21 11.4067 2 12.5 2C13.22 2 13.92 2.09333 14.6 2.28C15.011 2.39281 15.4049 2.53484 15.7817 2.70609C16.1122 2.85624 16.115 3.3085 15.8202 3.52027C14.9189 4.1679 14.1755 4.97781 13.59 5.95C12.8633 7.15667 12.5 8.50667 12.5 10C12.5 11.4933 12.8633 12.8433 13.59 14.05C14.1755 15.0222 14.9189 15.8321 15.8202 16.4797C16.115 16.6915 16.1122 17.1438 15.7817 17.2939C15.4049 17.4652 15.011 17.6072 14.6 17.72C13.92 17.9067 13.22 18 12.5 18ZM11.8143 16.92C11.8143 16.92 14.3607 17.1246 14.4804 17.0857C14.5424 17.0656 14.3727 16.9035 14.2117 16.7485C14.0822 16.6238 13.8353 16.2894 13.7169 16.1541C12.9819 15.3142 12.0558 14.2634 11.6818 13.2957C11.2618 12.209 11.0518 11.0724 11.0518 9.88571C11.0518 8.69905 11.2618 7.69619 11.6818 6.60952C12.0385 5.68647 13.1488 4.43495 14.0354 3.70543C14.197 3.57245 14.1946 3.16894 13.9934 3.11128C13.8611 3.07338 13.6866 3.04246 13.4518 3.02857H13.0318C11.2585 3.02857 9.40381 3.48286 8.15714 4.72952C6.91048 5.97619 6.02381 7.83238 6.02381 9.60571C6.02381 11.379 6.32857 12.6533 7.85238 14.7867C9.68095 16.6152 11.8143 16.92 11.8143 16.92Z" fill="#368888"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <circle cx="13" cy="13" r="13" fill="#368888"/>
+              </svg>
+            </div>
+        </a></span>
+          
     </div>
 
     <main>
@@ -357,12 +367,16 @@
 </main>
 <script>
 const texts = ["for startup", "for business", "for freelancing", "for everyone"];
+const gradients = [
+    "linear-gradient(90deg, #298AEE,#03CFC2)",
+    "linear-gradient(90deg, #298AEE,#AC8AFA)",
+];
     const typingSpeed = 150; // Speed of typing in ms
     const erasingSpeed = 100; // Speed of erasing in ms
     const delayBetweenTexts = 1000; // Delay between texts in ms
 
     let textIndex = 0;
-    let charIndex = 4;
+    let charIndex = 0;
     let typing = true;
 
     const textElement = document.getElementById("text");
@@ -370,7 +384,16 @@ const texts = ["for startup", "for business", "for freelancing", "for everyone"]
     function typeText() {
       if (typing) {
         if (charIndex < texts[textIndex].length) {
-          textElement.textContent += texts[textIndex].charAt(charIndex);
+          const span = document.createElement ("span");
+          span.textContent =texts[textIndex].charAt(charIndex);
+          
+          // Apply the gradient based on the index
+          if (textIndex % 2 ===0) {
+            span.style.backgroundImage =gradients[0]; //For 1st and 3rd text
+          } else {
+            span.style.backgroundImage = gradients[1]; //For 2ns and 4th text
+          }
+          textElement.appendChild (span);
           charIndex++;
           setTimeout(typeText, typingSpeed);
         } else {
@@ -379,7 +402,7 @@ const texts = ["for startup", "for business", "for freelancing", "for everyone"]
         }
       } else {
         if (charIndex > 4) {
-          textElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+          textElement.lastChild.remove ();
           charIndex--;
           setTimeout(typeText, erasingSpeed);
         } else {

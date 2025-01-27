@@ -506,13 +506,14 @@ align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  align-self: stretch;
   gap: 40px;
   flex: 1 0 0;
   color: rgb(255, 248, 255 1);
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 130%;
+  line-height: 160%;
 }
 .text-contacts {
   font-size: 20px;
@@ -548,8 +549,23 @@ justify-content: center;
 text-transform: lowercase;
 display: flex;
 align-items: center;
-background: var(--gradient-name-1, linear-gradient(90deg, #298AEE 0%, #02D0DE 100%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+}
+.svg-button {
+ display: flex;
+ width: 64px;
+ height: 64px;
+ padding: 4px;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-end;
+ gap: 10px;
+}
+.button-theme{
+display: flex;
+padding: 2px;
+justify-content: center;
+align-items: center;
+gap: 5px;
+border-radius: 25px;
+background: var(--light-blue-4, #7DCFCF);
 }
