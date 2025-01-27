@@ -45,7 +45,7 @@
                 <div class="name">
                     <span>Lightning fast internet</span>
                     </div>
-                    <div id="text"></div>
+                    <div id="text" class="gradient-phrase-1"></div>
                     <div class="switch">
                         <div class="svg-1parth">
                                 <div class="switch">
@@ -385,15 +385,16 @@ const gradients = [
       if (typing) {
         if (charIndex < texts[textIndex].length) {
           const span = document.createElement ("span");
-          span.textContent =texts[textIndex].charAt(charIndex);
+          // span.classList.add("gradient-letter");
+          span.textContent = texts[textIndex].charAt(charIndex);
           
           // Apply the gradient based on the index
-          if (textIndex % 2 ===0) {
-            span.style.backgroundImage =gradients[0]; //For 1st and 3rd text
-          } else {
-            span.style.backgroundImage = gradients[1]; //For 2ns and 4th text
-          }
-          textElement.appendChild (span);
+          // if (textIndex % 2 ===0) {
+          //   span.style.background = gradients[0]; //For 1st and 3rd text
+          // } else {
+          //   span.style.background = gradients[1]; //For 2ns and 4th text
+          // }
+          textElement.appendChild(span);
           charIndex++;
           setTimeout(typeText, typingSpeed);
         } else {
@@ -402,13 +403,18 @@ const gradients = [
         }
       } else {
         if (charIndex > 4) {
-          textElement.lastChild.remove ();
+          textElement.lastChild.remove();
           charIndex--;
           setTimeout(typeText, erasingSpeed);
         } else {
           typing = true;
           textIndex = (textIndex + 1) % texts.length;
-          setTimeout(typeText, typingSpeed);
+          // 0 1 2 3
+          if (textIndex % 2 === 0)
+            textElement.classList.replace("gradient-phrase-1", "gradient-phrase-2");
+          else
+            textElement.classList.replace("gradient-phrase-2", "gradient-phrase-1");
+            setTimeout(typeText, typingSpeed);
         }
       }
     }

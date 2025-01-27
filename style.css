@@ -27,6 +27,22 @@ color: rgb(255, 248, 255);
     padding-bottom: 70px;
     text-transform:none;
   }
+  .gradient-phrase-1 {
+    background: linear-gradient(90deg, #298AEE,#03CFC2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* color: transparent; */
+    /* display: inline-block; */
+    -webkit-text-fill-color: transparent;
+  }
+  .gradient-phrase-2 {
+    background: linear-gradient(90deg, #298AEE,#AC8AFA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* color: transparent; */
+    /* display: inline-block; */
+    -webkit-text-fill-color: transparent;
+  }
   .conteiner {
     width: 100%;
     display:flex;
