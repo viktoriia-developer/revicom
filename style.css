@@ -257,7 +257,7 @@ align-items: center;
   mask-composite: exclude;
   pointer-events: none;
 }
-.maincard-small{
+.maincard-small-green{
   background-color: #1C1C1C;
   align-items: center;
   text-align: center;
@@ -584,4 +584,8 @@ align-items: center;
 gap: 5px;
 border-radius: 25px;
 background: var(--light-blue-4, #7DCFCF);
+}
+.card-list .card-item {
+width: 306px;
+height: 476px;
 }
