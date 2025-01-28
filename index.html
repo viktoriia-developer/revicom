@@ -44,8 +44,12 @@
             <div class="text">
                 <div class="name">
                     <span>Lightning fast internet</span>
+                </div>
+                    <div id="text-replacement" class="gradient-phrase-1"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="106" viewBox="0 0 5 106" fill="none">
+                    <path d="M2.5 3L2.5 103" stroke="#FFF8FF" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
                     </div>
-                    <div id="text" class="gradient-phrase-1"></div>
                     <div class="switch">
                         <div class="svg-1parth">
                                 <div class="switch">
@@ -379,7 +383,7 @@ const gradients = [
     let charIndex = 0;
     let typing = true;
 
-    const textElement = document.getElementById("text");
+    const textElement = document.getElementById("text-replacement");
 
     function typeText() {
       if (typing) {
