@@ -1,0 +1,430 @@
+/*Importing Google Font - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Montserrat", serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:  #1C1C1C no-repeat center;
+}
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+}
+.card-list .card-item {
+  background-color: #1C1C1C;
+  align-items: center;
+  text-align: center;
+  width: 376px;
+  height: 524px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 0.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  flex-shrink: 0;
+  font-size: 20px;
+  gap: 20px;
+  font-weight: bold; 
+  color: #7DCFCF;
+  border: 3px solid;
+  border-radius: 40px;
+  border-color: #7DCFCF;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  padding-left: 16px;
+  padding-right: 16px;
+  user-select: none;
+}
+.card-list .card-item .user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding: 4px;
+}
+.card-list .card-item .user-profession {
+    font-size: 1.15rem;
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+.card-list .card-item .message-button {
+  display: flex;
+  align-items: center;
+  width: 128px;
+  background: #7DCFCF;
+  border-radius: 90px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  justify-content: center;
+  color:#1C1C1C ;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.card-list .card-item .message-button:hover {
+    background:  rgba(190, 255, 255, 1);
+    border: 1px solid #fff;  
+    color: rgba(28, 28, 28, 1);
+}
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+}
+.slider-wrapper .swiper-slide-button {
+    color: rgba(188, 188, 188, 1);
+    margin-top: -50px;
+    transition: 0.2s ease;
+}
+.slider-wrapper .swiper-slide-button:hover {
+color: rgba(110, 103, 110, 1);
+}
+@media (max-width:848px) {
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+    }
+        
+    
+}
+
+.rounded-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px; /* Border thickness */
+    background: linear-gradient(to bottom, rgba(74, 68, 88, 1), rgba(18, 18, 18, 1));
+    -webkit-mask: linear-gradient(#1C1C1C 0 0) content-box, linear-gradient(#1C1C1C 0 0);
+    mask: linear-gradient(#1C1C1C 0 0) content-box, linear-gradient(#1C1C1C 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+.name-small {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .stroke-small {
+    display: flex;
+    justify-content: center;
+    width: 282px;
+    align-items: center;
+    gap: 6px;
+    align-self: stretch;
+  }
+  .column-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    padding: 0px;
+  }
+  .rounded-frame-small {
+    width: 90px;
+    justify-content: flex-start;
+    height: 114px;
+    font-weight: 700;
+    font-size: 24px;
+    gap: 4px;
+    color: #FFF8FF;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 128px;
+    border-radius: 18px;
+    background-color: #1C1C1C;
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    align-items:center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .rounded-frame-small::before {
+    content: '';
+    position: absolute;
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px; /* Border thickness */
+    background: linear-gradient(to bottom, rgba(74, 68, 88, 1), rgba(18, 18, 18, 1));
+    -webkit-mask: linear-gradient(#1C1C1C 0 0) content-box, linear-gradient(#1C1C1C 0 0);
+    mask: linear-gradient(#1C1C1C 0 0) content-box, linear-gradient(#1C1C1C 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .conteiner-svg-small {
+    height: 24px;
+    width: 24px;
+    justify-content: flex-start;
+    display: flex;
+    padding: 4px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .flex-small {
+    display: flex;
+    font-weight: normal;
+    flex-flow: column;
+    justify-content: flex-start;
+    font-size: 14px;
+    text-align: center;
+    gap: 0px;
+  }
+  .flex-gray-small {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: normal;
+    flex-flow: column;
+    font-size: 14px;
+    text-align: center;
+    gap: 0px;
+    color: #606060;
+  }
+
+
+
+
+
+
+
+
+  .card-list .card-item-small {
+    background-color: #1C1C1C;
+    align-items: center;
+    text-align: center;
+    width: 376px;
+    height: 524px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    flex-shrink: 0;
+    font-size: 20px;
+    gap: 20px;
+    font-weight: bold;
+    color: rgba(180, 183, 249, 1);
+    border: 3px solid;
+    border-radius: 40px;
+    border-color: #B4B7F9;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 16px;
+    padding-right: 16px;
+    user-select: none;
+      
+  }
+  .card-list .card-item-small .user-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 40px;
+      border: 3px solid #fff;
+      padding: 4px;
+  }
+  .card-list .card-item-small .user-profession {
+      font-size: 1.15rem;
+      color: #e3e3e3;
+      font-weight: 500;
+      margin: 14px 0 40px;
+  }
+  .card-list .card-item-small .message-button-small {
+    display: flex;
+    align-items: center;
+    width: 128px;
+    background: #7DCFCF;
+    border-radius: 90px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    justify-content: center;
+    color:#1C1C1C ;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  .card-list .card-item-small .message-button-small:hover {
+      background:  rgba(190, 255, 255, 1);
+      border: 1px solid #fff;  
+      color: rgba(28, 28, 28, 1);
+  }
+  .price-small {
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    color:#FFF8FF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 130%;
+    font-style: normal;
+    gap: 8px;
+    align-self: center;
+  }
+  .conteiner-price-small {
+      gap: 18px;
+      padding: 8px;
+    }
+.card-list .card-item-small-green {
+    background-color: #1C1C1C;
+    align-items: center;
+    text-align: center;
+    width: 376px;
+    height: 524px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    flex-shrink: 0;
+    font-size: 20px;
+    gap: 20px;
+    font-weight: bold;
+    color: rgba(138, 218, 136, 1);
+    border: 3px solid;
+    border-radius: 40px;
+    border-color: rgba(138, 218, 136, 1);
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 16px;
+    padding-right: 16px;
+    user-select: none;
+}
+.card-list .card-item-small-green .message-button-small-green {
+    display: flex;
+    align-items: center;
+    width: 128px;
+    background: rgba(138, 218, 136, 1);
+    border-radius: 90px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    justify-content: center;
+    color:#1C1C1C ;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.card-list .card-item-small .message-button-small {
+    display: flex;
+    align-items: center;
+    width: 128px;
+    background: rgba(180, 183, 249, 1);
+    border-radius: 90px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    justify-content: center;
+    color:#1C1C1C ;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+.card-list .card-item-small-pink .message-button-small-pink {
+    display: flex;
+    align-items: center;
+    width: 128px;
+    background: rgba(201, 174, 235, 1);
+    border-radius: 90px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    justify-content: center;
+    color:#1C1C1C ;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.card-list .card-item-small-pink {
+    background-color: #1C1C1C;
+    align-items: center;
+    text-align: center;
+    width: 376px;
+    height: 524px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    flex-shrink: 0;
+    font-size: 20px;
+    gap: 20px;
+    font-weight: bold;
+    color: rgba(201, 174, 235, 1);
+    border: 3px solid;
+    border-radius: 40px;
+    border-color: #B4B7F9;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 16px;
+    padding-right: 16px;
+    user-select: none;
+}
+.card-list .card-item-small-pink .message-button-small-pink:hover {
+    background:  #FDE2FF;
+    border: 1px solid #fff;  
+    color: rgba(28, 28, 28, 1);
+}
+.card-list .card-item-small .message-button-small:hover {
+    background:  #DFE2FF;
+    border: 1px solid #fff;  
+    color: rgba(28, 28, 28, 1);
+}
+.card-list .card-item-small-green .message-button-small-green:hover {
+    background:  #E4FFE2;
+    border: 1px solid #fff;  
+    color: rgba(28, 28, 28, 1);
+}
