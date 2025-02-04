@@ -4,11 +4,11 @@ const swiper = new Swiper('.slider-wrapper', {
     spaceBetween:-70,
     effect: 'coverflow',
     coverflowEffect: {
-        rotate: 0, // Rotation angle of cards
-        stretch: 0, // Stretch value between cards
-        depth: 100, // Depth of the parallax effect
-        modifier: 2, // Scale multiplier for each slide
-        slideShadows: true, // Enables shadows on slides
+      rotate: 0, // Rotation angle of cards
+      stretch: 0, // Stretch value between cards
+      depth: 100, // Depth of the parallax effect
+      modifier: 2, // Scale multiplier for each slide
+      slideShadows: true, // Enables shadows on slides
     },
   
     // If we need pagination
@@ -27,13 +27,13 @@ const swiper = new Swiper('.slider-wrapper', {
     //Responsive breakpoints
   breakpoints:{
     0:{
-        slidesPerView: 3,
+      slidesPerView: 3,
+    },
+    682:{
+      slidesPerView: 3,
     },
     848:{
-        slidesPerView: 3,
-    },
-    1024:{
-        slidesPerView: 3,
+      slidesPerView: 3,
     }
   }
   

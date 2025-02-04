@@ -26,6 +26,10 @@ body {
 .menu {
   width: 100%;
   display:flex;
+  position: fixed;
+  top: 32px;
+  left: 0;
+  width: 100%;
   background-color:#1C1C1C;
   color: rgb(255, 248, 255);
   padding-top:23px;
@@ -42,6 +46,30 @@ body {
   align-items: center;
   text-align: center;
   justify-content:center;
+}
+.advert{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--gradient-name-1, linear-gradient(90deg, #298AEE 0%, #02D0DE 100%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  color: var(--white, #FFF8FF);
+  text-align: center;
+  /* h2 */
+  font-family: "Atkinson Hyperlegible";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 32px */
+}
+.main-wrapper {
+  flex-direction: column;
+min-height: 100vh;
 }
 .svg-1parth {
   color: var(--white, #FFF8FF);
@@ -78,7 +106,7 @@ body {
   display: flex;
   font-size: 36px;
   justify-content: flex-start;
-  padding-top: 86px;
+  padding-top: 200px;
   font-weight: 500;
   padding-bottom: 70px;
   text-transform:none;
@@ -113,6 +141,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .name {
+  padding-top: 86px;
   font-display:flex;
   text-align: center;
   font-size: 46px;
@@ -177,7 +206,6 @@ body {
   max-width: 376px;
   max-height: 358px;
   align-self: stretch;
-  flex: 1 0 0;
   border-radius: 45px;
   padding-left: 70px;
   padding-right: 70px;
@@ -253,14 +281,14 @@ body {
   display: flex;
 }
 .footer {
-  display: flex;
-  height: 370px;
-  padding: 70px 124px;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 376px;
-  flex-shrink: 0;
-  align-self: stretch;
+  text-align: center;
+  padding: 10px;
+  background-color: #121212;
+  position: relative;
+  margin: -100px auto 0;
+  
+ 
+  
 }
 .slider-wrapper {
   overflow: hidden;
@@ -349,7 +377,6 @@ body {
 
 .rounded-frame::before {
   content: '';
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -400,7 +427,6 @@ body {
   height: 128px;
   border-radius: 18px;
   background-color: #1C1C1C;
-  position: relative;
   display: flex;
   justify-content:flex-start;
   flex-direction: column;
@@ -411,7 +437,6 @@ body {
   
 .rounded-frame-small::before {
   content: '';
-  position: absolute;
   justify-content: flex-start;
   top: 0;
   left: 0;
