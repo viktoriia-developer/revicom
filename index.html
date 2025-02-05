@@ -37,9 +37,16 @@
         </div>
       </a>
     </span>
-    <span><a href="Tariffs">Tariffs</a></span>
-    <span><a href="Contact us">Contact us</a></span>
-    <span><a href="About the company">About the company</a></span>
+    <div class="button-tariffs">
+      <div id="scrollDiv">Tariffs
+      </div>
+    </div>
+    <div class="button-contact-us">
+      <span><a href="Contact us">Contact us</a></span>
+    </div>
+    <div class="button-about">
+      <span><a href="About the company">About the company</a></span>
+    </div>
     <span>
       <a href="svg-button">
         <div class="button-theme">
@@ -484,38 +491,34 @@
           muted>
         </video>
       </div>
+      <div class="footer">
+        <div class="text-column">
+          <span>Contacts on Mercury</span>
+          <div class="text-contacts">
+            <span>Telephone #11+8 123 32 76</span>
+            <span>Mercury,35 km</span>
+            <span>extreme point of Kuiper,13</span>
+            <span>sun@revicom.mrc</span>
+          </div>
+          <p>&copy; 2025 Revicom</p>
+        </div>
+        <div class="text-column">
+          <span>Contacts on Earth</span>
+          <div class="text-contacts">
+            <span>Telephone +44 7879 645 126</span>
+            <span>Earth, The UK, London</span>
+            <span>The Avenue,15</span>
+            <span>earth@revicom.com</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  
   <!--LInking SWiperJS script-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!--LInking custom script-->
   <script src="script-swiper.js"></script>
-
-  <footer>
-    <div class="block-text">
-      <div class="text-column">
-        <span>Contacts on Mercury</span>
-        <div class="text-contacts">
-          <span>Telephone #11+8 123 32 76</span>
-          <span>Mercury,35 km</span>
-          <span>extreme point of Kuiper,13</span>
-          <span>sun@revicom.mrc</span>
-        </div>
-      </div>
-      <div class="text-column">
-        <span>Contacts on Earth</span>
-        <div class="text-contacts">
-          <span>Telephone +44 7879 645 126</span>
-          <span>Earth, The UK, London</span>
-          <span>The Avenue,15</span>
-          <span>earth@revicom.com</span>
-        </div>
-      </div>
-    </div>
-    <p>&copy; 2025 Revicom</p>
-  </footer>
+  
   <script>
     const texts = ["for startup", "for business", "for freelancing", "for everyone"];
     const gradients = [
@@ -571,6 +574,11 @@
     }
     // Start the typing animation
     typeText();
+  </script>
+  <script>
+    document.getElementById("").addEventListener("click", function() {
+    document.getElementById("tariff-section").scrollIntoView({ behavior: "smooth" });
+});
   </script>
 </body>
 </html>
