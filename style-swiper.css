@@ -1,6 +1,8 @@
 /*Importing Google Font - Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+.html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -110,6 +112,21 @@ body {
   padding-bottom: 70px;
   text-transform:none;
 }
+.switch-column {
+  display: inline-block;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  font-weight: 400;
+  gap: 0px;
+  flex-direction: column;
+  padding-block: 14px;
+}
+.switch-stroke {
+  flex-direction: row;
+  vertical-align: middle;
+}
 .switch{
   text-align: center;
   font-style: normal;
@@ -118,6 +135,7 @@ body {
   font-weight: 400;
   gap: 0px;
   padding-block: 14px;
+  padding-bottom: 10px;
 }
 .gradient-phrase-1 {
   background: linear-gradient(90deg, #298AEE,#03CFC2);
@@ -146,15 +164,19 @@ body {
   font-size: 46px;
   color: #FFF8FF;
 }
+
 .tariff-section {
   background-color: #1C1C1C;
   padding-top: 70px;
+  width: 100%;
+  min-width: 100%;
   padding-bottom: 70px;
   gap: 60px;
   height: 772px;
   justify-content: space-around;
   align-self: stretch;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   font-style: normal;
@@ -251,23 +273,21 @@ body {
   bottom: 0;
   display: flex;
   height: 370px;
-  gap: 376px;
-  height: auto;
-  margin: auto;
+  gap: 376px; 
 }
 .text-column {
   display: flex;
   flex-direction: column;
   align-self: stretch;
   gap: 40px;
-  justify-content: left;
-  text-align: justify;
+  justify-content:flex-start;
+  text-align:left;
   flex: 1 0 0;
   color: rgb(255, 248, 255 1);
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 160%;
+  min-width: 408px;
 }
 .text-contacts {
   font-size: 20px;
@@ -686,14 +706,18 @@ body {
   border: 1px solid var(--blue-1, #009CE6);
   background: linear-gradient(0deg, rgba(0, 156, 230, 0.10) 0%, rgba(0, 156, 230, 0.10) 100%);
 }
-.button-about{
+
+#anchor1, #anchor2, #anchor3 { /*Doesn't work, evetything bottom related to button with navigation don't delete untill I will not change it */
   min-width:max-content;
+  display: inline-block;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 6px;
+  text-decoration: none;
   padding-bottom: 8px;
   height: auto;
   display: flex;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 .button-about:hover{
   background: #292929;
@@ -709,23 +733,6 @@ body {
   display: flex;
 }
 .button-contact-us:hover{
-  background: #292929;
-  border-radius: 25px;
-}
-.scrollDiv{
-  min-width:max-content;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 6px;
-  padding-bottom: 8px;
-  height: auto;
-  display: flex;
-  cursor: pointer;
-  transform: translateX(-50%);
-  text-align: center;
-  
-}
-.scrollDiv:hover{
   background: #292929;
   border-radius: 25px;
 }
