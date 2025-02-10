@@ -168,7 +168,6 @@ body {
   font-size: 46px;
   color: #FFF8FF;
 }
-
 .tariff-section {
   background-color: #1C1C1C;
   padding-top: 70px;
@@ -281,6 +280,9 @@ body {
 }
 .text-column {
   display: flex;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-size: 20px;
   flex-direction: column;
   align-self: stretch;
   gap: 40px;
@@ -294,7 +296,6 @@ body {
   min-width: 408px;
 }
 .text-contacts {
-  font-size: 20px;
   color:#BCBCBC;
   font-style: normal;
   font-weight: 400;
@@ -704,15 +705,66 @@ body {
   background-color: rgba(148, 230, 230, 1);
   color: rgba(82, 164, 164, 1);
   border-radius: 25px;
+  transform: scale(1.1);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 .button-theme:active {
   border-radius: 25px;
+  transform: scale(1.1);
   border: 1px solid var(--blue-1, #009CE6);
   background: linear-gradient(0deg, rgba(0, 156, 230, 0.10) 0%, rgba(0, 156, 230, 0.10) 100%);
 }
+.logo:hover {
+  transition: background 0.3s ease, transform 0.2s ease;
+  transform: scale(1.1);
+}
+/* Style the navigation container */
+nav {
+  padding: 15px 0; /* Top and bottom padding */
+  text-align: center;
+  min-width: 545px;
+  gap: 102px;
+  display: inline-block; /* Center align the list */
+}
 
-#anchor1, #anchor2, #anchor3 { /*Doesn't work, evetything bottom related to button with navigation don't delete untill I will not change it */
-  min-width:max-content;
+/* Remove default list styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+/* Style the list items */
+nav ul li {
+  display: inline-block; /* Display items horizontally */
+  margin: 0 15px; /* Space between menu items */
+}
+
+/* Style the links */
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Text color */
+  padding-top: 18px;
+  padding-bottom: 20px;/* Padding around links */
+  border-radius: 20px; /* Rounded corners */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  background: #272727; /* Change background color on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Active (when clicked) */
+nav ul li a:active {
+  background: #7DCFCF;
+  transform: scale(0.95);
+}
+#anchor1, #anchor2, #anchor3 {
   display: inline-block;
   padding-left: 16px;
   padding-right: 16px;
