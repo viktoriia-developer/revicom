@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   color: rgb(255, 248, 255);
-  box-sizing: border-box;
   text-decoration: none;
   font-family: "Montserrat", serif;
 }
@@ -30,7 +29,6 @@ body {
   position: fixed;
   top: 32px;
   left: 0;
-  width: 100%;
   background-color:#1C1C1C;
   color: rgb(255, 248, 255);
   padding-top:23px;
@@ -252,16 +250,21 @@ body {
 }
 .video-section {
   background-color: #1C1C1C;
+  margin: 0;
+
   padding-left: 80px;
   padding-right: 80px;
   padding-top: 70px;
-  padding-bottom: 70px;
-  font-size: 32px;
+  left: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   align-self: stretch;
+  text-align: center;
+  padding-bottom: 70px;
+  font-size: 32px;
   flex-direction: column;
-  display: flex;
   color: #FFF8FF;
   font-weight: 700;
   font-style: normal;
@@ -790,5 +793,15 @@ nav ul li a:active {
 .button-contact-us:hover{
   background: #292929;
   border-radius: 25px;
+}
+/* Make the sections full width */
+#video-section, #tariff-section {
+    width: 100vw; /* 100% of the viewport width */
+    min-height: 100vh; /* Adjust height as needed */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent tiling */
+    margin: 0; /* Remove default margin */
+    padding: 50px 0; /* Add padding to keep content spaced */
 }
 
